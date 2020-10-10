@@ -42,7 +42,7 @@ section {
     color: white;
     position: relative;
     text-align: center;
-
+    width: 100%;
     /* Center the content of the sections */
     .inner {
         margin: 0 auto;
@@ -62,7 +62,7 @@ section {
 
     .inner-img-box {
         width: 80%;
-        margin: 0 auto;
+        // margin: 0 auto;
     }
 }
 
@@ -99,6 +99,20 @@ section {
     padding: 6px 20px;
     font-style: italic;
     font-size: 1.3rem;
+}
+
+.small-title {
+    @extend .big-title;
+    h2 {
+        font-size: 3.9rem;
+    }
+}
+
+.medium-title {
+    @extend .big-title;
+    h2 {
+        font-size: 4.8rem;
+    }
 }
 
 /* Background colors for each section */

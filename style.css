@@ -41,6 +41,7 @@ section {
   color: white;
   position: relative;
   text-align: center;
+  width: 100%;
   /* Center the content of the sections */
 }
 
@@ -66,7 +67,6 @@ section .inner {
 
 .inner-img .inner-img-box {
   width: 80%;
-  margin: 0 auto;
 }
 
 .inner-cart {
@@ -99,7 +99,7 @@ section .inner {
   font-size: 1.5rem;
 }
 
-.big-title h2 {
+.big-title h2, .small-title h2, .medium-title h2 {
   font-size: 5.5rem;
   line-height: 1;
   margin: 0 0 30px 0;
@@ -112,6 +112,14 @@ section .inner {
   padding: 6px 20px;
   font-style: italic;
   font-size: 1.3rem;
+}
+
+.small-title h2 {
+  font-size: 3.9rem;
+}
+
+.medium-title h2 {
+  font-size: 4.8rem;
 }
 
 /* Background colors for each section */
