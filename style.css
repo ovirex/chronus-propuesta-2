@@ -35,6 +35,46 @@ img {
   height: auto;
 }
 
+header, .header-2 {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+header ul, .header-2 ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin: 60px 0 0 0;
+  padding: 0;
+}
+
+header ul li, .header-2 ul li {
+  margin: 0 16px;
+  list-style: none;
+  color: white;
+  font-style: italic;
+}
+
+.header-2 {
+  position: absolute;
+  bottom: -230px;
+}
+
+.header-2 ul .header-img {
+  margin: 0 -10px 0 -10px;
+}
+
+.header-img {
+  width: 160px;
+  position: relative;
+  top: -65px;
+}
+
 /* Make each section 100% of the browser viewport height */
 section {
   height: 100vh;
