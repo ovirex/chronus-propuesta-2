@@ -1,0 +1,94 @@
+/* Sass color variables */
+/* Make the body 100% of the browser viewport height */
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+h1 {
+  padding: 20% 0 0 0;
+  margin: 0;
+  text-align: center;
+  font-size: 20px;
+}
+
+p {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+strong {
+  color: #fff;
+}
+
+/* Make each section 100% of the browser viewport height */
+section {
+  height: 100vh;
+  color: white;
+  position: relative;
+  text-align: center;
+  /* Center the content of the sections */
+}
+
+section .inner {
+  margin: 0 auto;
+  max-width: 85%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+/* Background colors for each section */
+#section-1, #section-2, #section-3, #section-4, #section-5, #section-6, #section-7 {
+  background-color: #bf5540;
+}
+
+#section-2 {
+  background-color: #bf6a40;
+}
+
+#section-3 {
+  background-color: #bf8040;
+}
+
+#section-4 {
+  background-color: #bf9540;
+}
+
+#section-5 {
+  background-color: #bfaa40;
+}
+
+#section-1, #section-2, #section-3, #section-4, #section-5, #section-6, #section-7 {
+  background-image: url("./assets/HOME.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#section-2 {
+  background-image: url("/assets/A GASOLINA.jpg");
+}
+
+#section-3 {
+  background-image: url("/assets/A DIESEL.jpg");
+}
+
+#section-4 {
+  background-image: url("/assets/FUERA DE BORDA.jpg");
+}
+
+#section-5 {
+  background-image: url("/assets/MOTOCICLETAS.jpg");
+}
+
+#section-6 {
+  background-image: url("/assets/TRANSMISIONES.jpg");
+}
+
+#section-7 {
+  background-image: url("/assets/INDUSTRIALES.jpg");
+}
+/*# sourceMappingURL=style.css.map */

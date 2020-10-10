@@ -1,0 +1,84 @@
+/* Sass color variables */
+$blue: #0089cd;
+$white: #ffffff;
+
+/* Make the body 100% of the browser viewport height */
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+h1 {
+    padding: 20% 0 0 0;
+    margin: 0;
+    text-align: center;
+    font-size: 20px;
+}
+p {
+    text-align: center;
+    color: transparentize($white, 0.5);
+}
+strong {
+    color: #fff;
+}
+
+/* Make each section 100% of the browser viewport height */
+section {
+    height: 100vh;
+    color: white;
+    position: relative;
+    text-align: center;
+
+    /* Center the content of the sections */
+    .inner {
+        margin: 0 auto;
+        max-width: 85%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+/* Background colors for each section */
+
+@for $i from 1 to 6 {
+    #section-#{$i} {
+        background-color: hsl(10 * $i, 50, 50);
+    }
+}
+
+#section-1 {
+    background-image: url("./assets/HOME.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#section-2 {
+    @extend #section-1;
+    background-image: url("/assets/A\ GASOLINA.jpg");
+}
+
+#section-3 {
+    @extend #section-1;
+    background-image: url("/assets/A\ DIESEL.jpg");
+}
+
+#section-4 {
+    @extend #section-1;
+    background-image: url("/assets/FUERA\ DE\ BORDA.jpg");
+}
+
+#section-5 {
+    @extend #section-1;
+    background-image: url("/assets/MOTOCICLETAS.jpg");
+}
+
+#section-6 {
+    @extend #section-1;
+    background-image: url("/assets/TRANSMISIONES.jpg");
+}
+
+#section-7 {
+    @extend #section-1;
+    background-image: url("/assets/INDUSTRIALES.jpg");
+}
