@@ -6,8 +6,13 @@ body {
   margin: 0;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 * {
   text-decoration: none;
+  font-family: "Poppins", sans-serif;
 }
 
 h1 {
@@ -36,7 +41,7 @@ img {
 }
 
 header, .header-2 {
-  position: fixed;
+  position: absolute;
   width: 100%;
   z-index: 1;
 }
@@ -60,9 +65,13 @@ header ul li, .header-2 ul li {
   font-style: italic;
 }
 
+header ul li a, .header-2 ul li a {
+  font-weight: 500;
+}
+
 .header-2 {
   position: absolute;
-  bottom: -230px;
+  bottom: -220px;
 }
 
 .header-2 ul .header-img {
@@ -133,6 +142,7 @@ section .inner {
 .cart-title h2 {
   font-style: italic;
   font-size: 2.9rem;
+  font-weight: bold;
 }
 
 .cart-title h2 span {
