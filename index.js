@@ -21,12 +21,9 @@ window.addEventListener("scroll", function () {
     const headerFix = document.getElementsByClassName("header-2")[0];
     if (window.pageYOffset >= window.innerHeight) {
         headerFix.style.position = "fixed";
-        headerFix.style.top = "0";
-        console.log("In");
+        headerFix.style.top = "50px";
     } else {
         headerFix.style.position = "";
         headerFix.style.top = "";
     }
-    // console.log(window.pageYOffset);
-    // console.log(window.innerHeight);
 });

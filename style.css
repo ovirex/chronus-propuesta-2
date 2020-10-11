@@ -44,6 +44,9 @@ header, .header-2 {
   position: absolute;
   width: 100%;
   z-index: 1;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 header ul, .header-2 ul {
@@ -72,6 +75,10 @@ header ul li a, .header-2 ul li a {
 .header-2 {
   position: absolute;
   bottom: -220px;
+}
+
+.header-2 ul {
+  margin: 0;
 }
 
 .header-2 ul .header-img {
@@ -225,5 +232,98 @@ section .inner {
 
 #section-7 {
   background-image: url("./assets/INDUSTRIALES.jpg");
+}
+
+/********SCROLL ANIMATION**********/
+.mouse-position {
+  position: absolute;
+  display: block;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  bottom: -35px;
+  left: 50%;
+  margin: 50px 0;
+}
+
+/* END: PEN STYLES */
+/*
+  Animated Mouse Scroll Button (v1.0)
+  By Sam Jakob Mearns (https://www.samjakob.com/)
+  */
+.mouse-container {
+  display: block;
+  text-align: center;
+}
+
+.mouse-container .mouse-outer {
+  position: relative;
+  display: inline-block;
+  height: 60px;
+  width: 35px;
+  border: 2px solid white;
+  border-radius: 60px;
+  -webkit-transition: border-color 0.2s ease-in-out;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.mouse-container .mouse-outer .mouse-wheel {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  margin-left: -2.91667px;
+  height: 15px;
+  width: 6px;
+  background-color: white;
+  border-radius: 6px;
+  -webkit-transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
+  -webkit-animation: scroll 1.4s infinite linear;
+  animation: scroll 1.4s infinite linear;
+}
+
+.mouse-container .mouse-outer:hover {
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.mouse-container .mouse-outer:hover .mouse-wheel {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+@-webkit-keyframes scroll {
+  0% {
+    -webkit-transform: scaleY(0.5) translateY(0);
+            transform: scaleY(0.5) translateY(0);
+  }
+  20% {
+    -webkit-transform: scaleY(1) translateY(7.5px);
+            transform: scaleY(1) translateY(7.5px);
+  }
+  60% {
+    -webkit-transform: scaleY(0.5) translateY(15px);
+            transform: scaleY(0.5) translateY(15px);
+  }
+  to {
+    -webkit-transform: scaleY(0.5) translateY(0);
+            transform: scaleY(0.5) translateY(0);
+  }
+}
+
+@keyframes scroll {
+  0% {
+    -webkit-transform: scaleY(0.5) translateY(0);
+            transform: scaleY(0.5) translateY(0);
+  }
+  20% {
+    -webkit-transform: scaleY(1) translateY(7.5px);
+            transform: scaleY(1) translateY(7.5px);
+  }
+  60% {
+    -webkit-transform: scaleY(0.5) translateY(15px);
+            transform: scaleY(0.5) translateY(15px);
+  }
+  to {
+    -webkit-transform: scaleY(0.5) translateY(0);
+            transform: scaleY(0.5) translateY(0);
+  }
 }
 /*# sourceMappingURL=style.css.map */
