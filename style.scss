@@ -52,6 +52,7 @@ header {
         width: 100%;
         margin: 60px 0 0 0;
         padding: 0;
+        align-items: center;
         li {
             margin: 0 16px;
             list-style: none;
@@ -67,11 +68,12 @@ header {
 .header-2 {
     @extend header;
     position: absolute;
-    bottom: -220px;
+    bottom: -270px;
     ul {
         margin: 0;
         .header-img {
-            margin: 0 -10px 0 -10px;
+            margin: 0 -10px;
+            margin-top: 1.4rem;
         }
     }
 }
@@ -79,12 +81,12 @@ header {
 .header-img {
     width: 160px;
     position: relative;
-    top: -65px;
+    // top: -65px;
 }
 
 /* Make each section 100% of the browser viewport height */
 section {
-    height: 100vh;
+    height: 115vh;
     color: white;
     position: relative;
     text-align: center;
@@ -228,7 +230,7 @@ $mouseWheelHoverColor: $mouseHoverColor;
     position: absolute;
     display: block;
     transform: translate(-50%, -50%);
-    bottom: -35px;
+    bottom: 30px;
     left: 50%;
     margin: 50px 0;
 }

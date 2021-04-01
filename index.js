@@ -19,11 +19,24 @@
 
 window.addEventListener("scroll", function () {
     const headerFix = document.getElementsByClassName("header-2")[0];
-    if (window.pageYOffset >= window.innerHeight) {
+
+    const elementViewHeight = calculateViewHeight("section");
+
+    const calcWindowHeight = (elementViewHeight * window.innerHeight) / 100;
+
+    if (window.pageYOffset >= calcWindowHeight) {
         headerFix.style.position = "fixed";
-        headerFix.style.top = "50px";
+        headerFix.style.top = "-28px";
     } else {
         headerFix.style.position = "";
         headerFix.style.top = "";
     }
 });
+
+/** Calculate section element's view height*/
+function calculateViewHeight(cssSelector) {
+    const sectionHeight = document.querySelector(cssSelector).offsetHeight;
+    const sectionViewHeight =
+        sectionHeight * (100 / document.documentElement.clientHeight);
+    return sectionViewHeight;
+}
