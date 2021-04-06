@@ -54,7 +54,7 @@ header, .header-2 {
 
 .header-2 {
   position: absolute;
-  bottom: -270px; }
+  bottom: calc(-15vh - 165px); }
   .header-2 ul {
     margin: 0; }
     .header-2 ul .header-img {
@@ -81,16 +81,21 @@ section {
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     width: 100%; }
 
 .inner-img {
-  width: 50%; }
+  flex-basis: 40%;
+  padding-top: 15%;
+  min-width: 40%; }
   .inner-img .inner-img-box {
-    width: 80%; }
+    width: 100%; }
+
+#section-1 .inner-img {
+  padding-top: 0; }
 
 .inner-cart {
-  width: 50%;
+  flex-basis: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -103,7 +108,8 @@ section {
     font-size: 2.9rem;
     font-weight: bold; }
     .cart-title h2 span {
-      font-size: 1.5rem; }
+      font-size: 1.5rem;
+      display: inline-block; }
 
 .big-title h2, .small-title h2, .medium-title h2 {
   font-size: 5.5rem;
@@ -125,28 +131,36 @@ section {
   font-size: 4.8rem; }
 
 /* Background colors for each section */
-#section-2 .inner-img {
-  padding: 15% 0 0 0; }
-
-#section-3 .inner-img {
-  padding: 15% 0 0 0; }
-
-#section-4 .inner-img {
-  padding: 15% 0 0 0; }
-
-#section-5 .inner-img {
-  padding: 15% 0 0 0; }
-
-#section-6 .inner-img {
-  padding: 15% 0 0 0; }
-
-#section-7 .inner-img {
-  padding: 15% 0 0 0; }
-
-#section-1, #section-2, #section-3, #section-4, #section-5, #section-6, #section-7 {
-  background-image: url("./assets/HOME.jpg");
+#section-1 {
   background-size: cover;
   background-repeat: no-repeat; }
+
+#section-2 {
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+#section-3 {
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+#section-4 {
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+#section-5 {
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+#section-6 {
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+#section-7 {
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+#section-1 {
+  background-image: url("./assets/HOME.jpg"); }
 
 #section-2 {
   background-image: url("./assets/A GASOLINA.jpg"); }
@@ -166,12 +180,12 @@ section {
 #section-7 {
   background-image: url("./assets/INDUSTRIALES.jpg"); }
 
-/********SCROLL ANIMATION**********/
+/************* SCROLL ANIMATION **************/
 .mouse-position {
   position: absolute;
   display: block;
   transform: translate(-50%, -50%);
-  bottom: 30px;
+  bottom: calc(15vh + -60px);
   left: 50%;
   margin: 50px 0; }
 
@@ -246,5 +260,87 @@ section {
     transform: scaleY(0.5) translateY(15px); }
   to {
     transform: scaleY(0.5) translateY(0); } }
+/************************************************/
+/************** MEDIA QUERIES ***************/
+@media screen and (max-width: 770px) {
+  .medium-title h2,
+  .small-title h2,
+  .big-title h2,
+  .small-title h2,
+  .medium-title h2 {
+    font-size: 2.5rem; }
+
+  .cart-title h2 {
+    font-size: 2rem; }
+    .cart-title h2 span {
+      font-size: 1.2rem;
+      line-height: 1.2; }
+
+  header, .header-2 {
+    display: none; }
+
+  section .inner {
+    top: 40%;
+    flex-direction: column;
+    align-items: center; }
+
+  #section-1 > .inner {
+    top: 35%; }
+
+  .inner-cart {
+    align-items: center;
+    width: 100%; }
+
+  .inner-img .inner-img-box {
+    width: 100%;
+    margin: 0 auto; }
+
+  #section-1 {
+    background-position: right center; }
+
+  #section-2 {
+    background-position: right center; }
+
+  #section-3 {
+    background-position: right center; }
+
+  #section-4 {
+    background-position: right center; }
+
+  #section-5 {
+    background-position: right center; }
+
+  #section-6 {
+    background-position: right center; }
+
+  #section-7 {
+    background-position: right center; } }
+@media screen and (min-width: 320px) and (max-width: 770px) {
+  .inner-img {
+    width: 215px;
+    padding-top: 5%; } }
+@media screen and (min-width: 770px) and (max-width: 1060px) {
+  .medium-title h2,
+  .small-title h2,
+  .big-title h2,
+  .small-title h2,
+  .medium-title h2 {
+    font-size: 3.5rem; } }
+@media screen and (max-height: 450px) and (max-width: 815px) {
+  section .inner {
+    flex-direction: row; }
+
+  .inner-img {
+    padding-top: 25%; }
+
+  .medium-title h2,
+  .small-title h2,
+  .big-title h2,
+  .small-title h2,
+  .medium-title h2 {
+    font-size: 2.5rem; }
+
+  header, .header-2 {
+    display: none; } }
 
 /*# sourceMappingURL=style.css.map */

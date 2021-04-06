@@ -68,7 +68,7 @@ header {
 .header-2 {
     @extend header;
     position: absolute;
-    bottom: -270px;
+    bottom: calc(-15vh - 165px);
     ul {
         margin: 0;
         .header-img {
@@ -100,22 +100,29 @@ section {
         left: 50%;
         transform: translate(-50%, -50%);
         display: flex;
-        justify-content: space-around;
+        justify-content: space-evenly;
         width: 100%;
     }
 }
 
 .inner-img {
-    width: 50%;
-
+    flex-basis: 40%;
+    padding-top: 15%;
+    min-width: 40%;
     .inner-img-box {
-        width: 80%;
+        width: 100%;
         // margin: 0 auto;
     }
 }
 
+#section-1 {
+    .inner-img {
+        padding-top: 0;
+    }
+}
+
 .inner-cart {
-    width: 50%;
+    flex-basis: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -129,6 +136,7 @@ section {
         font-weight: bold;
         span {
             font-size: 1.5rem;
+            display: inline-block;
         }
     }
 }
@@ -166,56 +174,36 @@ section {
 
 /* Background colors for each section */
 
-@for $i from 1 to 8 {
-    // #section-#{$i} {
-    //     background-color: hsl(60 * $i, 78, 20);
-    // }
-    @if $i > 1 {
-        #section-#{$i} {
-            .inner-img {
-                padding: 15% 0 0 0;
-            }
-        }
+@for $i from 1 through 7 {
+    #section-#{$i} {
+        background-size: cover;
+        background-repeat: no-repeat;
     }
 }
 
 #section-1 {
     background-image: url("./assets/HOME.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 #section-2 {
-    @extend #section-1;
     background-image: url("./assets/A\ GASOLINA.jpg");
 }
-
 #section-3 {
-    @extend #section-1;
     background-image: url("./assets/A\ DIESEL.jpg");
 }
-
 #section-4 {
-    @extend #section-1;
     background-image: url("./assets/FUERA\ DE\ BORDA.jpg");
 }
-
 #section-5 {
-    @extend #section-1;
     background-image: url("./assets/MOTOCICLETAS.jpg");
 }
-
 #section-6 {
-    @extend #section-1;
     background-image: url("./assets/TRANSMISIONES.jpg");
 }
-
 #section-7 {
-    @extend #section-1;
     background-image: url("./assets/INDUSTRIALES.jpg");
 }
 
-/********SCROLL ANIMATION**********/
-
+/************* SCROLL ANIMATION **************/
 $mouseHeight: 60px;
 $mouseWidth: 35px;
 
@@ -230,7 +218,7 @@ $mouseWheelHoverColor: $mouseHoverColor;
     position: absolute;
     display: block;
     transform: translate(-50%, -50%);
-    bottom: 30px;
+    bottom: calc(15vh + -60px);
     left: 50%;
     margin: 50px 0;
 }
@@ -346,5 +334,96 @@ $mouseWheelHoverColor: $mouseHoverColor;
     }
     to {
         transform: scaleY(0.5) translateY(0);
+    }
+}
+/************************************************/
+
+/************** MEDIA QUERIES ***************/
+
+@media screen and (max-width: 770px) {
+    .medium-title,
+    .small-title,
+    .big-title {
+        h2 {
+            font-size: 2.5rem;
+        }
+    }
+
+    .cart-title h2 {
+        font-size: 2rem;
+        span {
+            font-size: 1.2rem;
+            line-height: 1.2;
+        }
+    }
+
+    header {
+        display: none;
+    }
+
+    section .inner {
+        top: 40%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #section-1 > .inner {
+        top: 35%;
+    }
+
+    .inner-cart {
+        align-items: center;
+        width: 100%;
+    }
+
+    .inner-img {
+        .inner-img-box {
+            width: 100%;
+            margin: 0 auto;
+        }
+    }
+
+    @for $i from 1 to 8 {
+        #section-#{$i} {
+            background-position: right center;
+        }
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 770px) {
+    .inner-img {
+        width: 215px;
+        padding-top: 5%;
+    }
+}
+
+@media screen and (min-width: 770px) and (max-width: 1060px) {
+    .medium-title,
+    .small-title,
+    .big-title {
+        h2 {
+            font-size: 3.5rem;
+        }
+    }
+}
+
+@media screen /*and (min-height: 300px) */ and (max-height: 450px) and (max-width: 815px) {
+    section {
+        .inner {
+            flex-direction: row;
+        }
+    }
+    .inner-img {
+        padding-top: 25%;
+    }
+    .medium-title,
+    .small-title,
+    .big-title {
+        h2 {
+            font-size: 2.5rem;
+        }
+    }
+    header {
+        display: none;
     }
 }
