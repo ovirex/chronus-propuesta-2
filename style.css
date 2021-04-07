@@ -133,31 +133,38 @@ section {
 /* Background colors for each section */
 #section-1 {
   background-size: cover;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  width: 100% !important; }
 
 #section-2 {
   background-size: cover;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  width: 100% !important; }
 
 #section-3 {
   background-size: cover;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  width: 100% !important; }
 
 #section-4 {
   background-size: cover;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  width: 100% !important; }
 
 #section-5 {
   background-size: cover;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  width: 100% !important; }
 
 #section-6 {
   background-size: cover;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  width: 100% !important; }
 
 #section-7 {
   background-size: cover;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  width: 100% !important; }
 
 #section-1 {
   background-image: url("./assets/HOME.jpg"); }
@@ -179,6 +186,9 @@ section {
 
 #section-7 {
   background-image: url("./assets/INDUSTRIALES.jpg"); }
+
+div[data-scrollmagic-pin-spacer] {
+  height: 100% !important; }
 
 /************* SCROLL ANIMATION **************/
 .mouse-position {
@@ -326,9 +336,11 @@ section {
   .small-title h2,
   .medium-title h2 {
     font-size: 3.5rem; } }
-@media screen and (max-height: 450px) and (max-width: 815px) {
+@media screen and (max-height: 475px) {
   section .inner {
     flex-direction: row; }
+    section .inner .inner-cart {
+      align-items: flex-start; }
 
   .inner-img {
     padding-top: 25%; }
@@ -340,7 +352,13 @@ section {
   .medium-title h2 {
     font-size: 2.5rem; }
 
+  .cart-title h2 {
+    margin: 0.5rem 0; }
+
   header, .header-2 {
-    display: none; } }
+    display: none; }
+
+  .mouse-position {
+    left: calc(100vw + -60px); } }
 
 /*# sourceMappingURL=style.css.map */

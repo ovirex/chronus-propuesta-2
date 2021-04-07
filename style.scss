@@ -178,6 +178,7 @@ section {
     #section-#{$i} {
         background-size: cover;
         background-repeat: no-repeat;
+        width: 100% !important;
     }
 }
 
@@ -201,6 +202,10 @@ section {
 }
 #section-7 {
     background-image: url("./assets/INDUSTRIALES.jpg");
+}
+
+div[data-scrollmagic-pin-spacer] {
+    height: 100% !important;
 }
 
 /************* SCROLL ANIMATION **************/
@@ -407,10 +412,13 @@ $mouseWheelHoverColor: $mouseHoverColor;
     }
 }
 
-@media screen /*and (min-height: 300px) */ and (max-height: 450px) and (max-width: 815px) {
+@media screen /*and (min-height: 300px) */ and (max-height: 475px) /*and (max-width: 815px) */ {
     section {
         .inner {
             flex-direction: row;
+            .inner-cart {
+                align-items: flex-start;
+            }
         }
     }
     .inner-img {
@@ -423,7 +431,15 @@ $mouseWheelHoverColor: $mouseHoverColor;
             font-size: 2.5rem;
         }
     }
+
+    .cart-title h2 {
+        margin: 0.5rem 0;
+    }
+
     header {
         display: none;
+    }
+    .mouse-position {
+        left: calc(100vw + -60px);
     }
 }
