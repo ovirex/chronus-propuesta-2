@@ -107,17 +107,26 @@ section {
 
 .inner-img {
     flex-basis: 40%;
-    padding-top: 15%;
+
     min-width: 40%;
     .inner-img-box {
-        width: 100%;
+        // width: 100%;
         // margin: 0 auto;
+        width: 90%;
+        margin: 0 auto;
+        position: relative;
+        bottom: -15px;
     }
 }
 
 #section-1 {
     .inner-img {
         padding-top: 0;
+        .inner-img-box {
+            width: 100%;
+            margin: 0 auto;
+            position: static;
+        }
     }
 }
 
@@ -385,6 +394,7 @@ $mouseWheelHoverColor: $mouseHoverColor;
         .inner-img-box {
             width: 100%;
             margin: 0 auto;
+            bottom: 0;
         }
     }
 
@@ -421,9 +431,12 @@ $mouseWheelHoverColor: $mouseHoverColor;
             }
         }
     }
-    .inner-img {
-        padding-top: 25%;
+
+    .inner-img .inner-img-box {
+        bottom: 0px;
+        width: 80%;
     }
+
     .medium-title,
     .small-title,
     .big-title {
