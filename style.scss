@@ -68,7 +68,9 @@ header {
 .header-2 {
     @extend header;
     position: absolute;
-    bottom: calc(-15vh - 165px);
+    bottom: calc(
+        -15vh - 165px - 500px
+    ); /* The "calc" has relation with the sections's margin-bottom */
     ul {
         margin: 0;
         .header-img {
@@ -76,6 +78,11 @@ header {
             margin-top: 1.4rem;
         }
     }
+}
+
+.header-fixed-position {
+    position: fixed;
+    top: -28px;
 }
 
 .header-img {
@@ -91,6 +98,7 @@ section {
     position: relative;
     text-align: center;
     width: 100%;
+    margin-bottom: 500px;
     /* Center the content of the sections */
     .inner {
         margin: 0 auto;

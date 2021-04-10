@@ -20,23 +20,14 @@
 window.addEventListener("scroll", function () {
     const headerFix = document.getElementsByClassName("header-2")[0];
 
-    const elementViewHeight = calculateViewHeight("section");
+    const sectionElement = document.getElementById("section-1");
 
-    const calcWindowHeight = (elementViewHeight * window.innerHeight) / 100;
+    /* The "sectionElement.offsetHeight" is plus 500 because that is the marginBottom of the "section" tag. */
+    const sectionHeight = sectionElement.offsetHeight + 500;
 
-    if (window.pageYOffset >= calcWindowHeight) {
-        headerFix.style.position = "fixed";
-        headerFix.style.top = "-28px";
+    if (window.pageYOffset >= sectionHeight) {
+        headerFix.classList.add("header-fixed-position");
     } else {
-        headerFix.style.position = "";
-        headerFix.style.top = "";
+        headerFix.classList.remove("header-fixed-position");
     }
 });
-
-/** Calculate section element's view height*/
-function calculateViewHeight(cssSelector) {
-    const sectionHeight = document.querySelector(cssSelector).offsetHeight;
-    const sectionViewHeight =
-        sectionHeight * (100 / document.documentElement.clientHeight);
-    return sectionViewHeight;
-}
