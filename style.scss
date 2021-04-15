@@ -111,11 +111,8 @@ header.open-menu {
         font-size: 1.4rem;
         grid-column-gap: 24px;
     }
-
-    .outside-header-logo {
-        display: none;
-    }
 }
+
 .open-closed-menu-btn {
     display: none;
     position: fixed;
@@ -134,9 +131,12 @@ header.open-menu {
 
 .outside-header-logo {
     display: none;
-    position: fixed;
-    top: 10px;
+    position: absolute;
+    top: 36px;
     left: calc(0% + 25px);
+}
+header.open-menu ~ div header.header-2 .outside-header-logo {
+    display: none;
 }
 
 /***** hamburguer-icon ****/
@@ -201,9 +201,7 @@ header.open-menu {
 .header-2 {
     @extend header;
     position: absolute;
-    bottom: calc(
-        -15vh - 165px - 500px
-    ); /* The "calc" has relation with the sections's margin-bottom */
+    top: -25px;
     ul {
         margin: 0;
         .header-img {
@@ -222,6 +220,10 @@ header.open-menu {
     width: 160px;
     position: relative;
     // top: -65px;
+}
+
+.relative-container {
+    position: relative;
 }
 
 /* Make each section 100% of the browser viewport height */
