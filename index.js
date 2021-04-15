@@ -17,6 +17,9 @@
     });
 })(jQuery);
 
+/**
+ * Make the header fixed when user sroll to its position
+ */
 window.addEventListener("scroll", function () {
     const headerFix = document.getElementsByClassName("header-2")[0];
 
@@ -29,5 +32,31 @@ window.addEventListener("scroll", function () {
         headerFix.classList.add("header-fixed-position");
     } else {
         headerFix.classList.remove("header-fixed-position");
+    }
+});
+
+/**
+ * Make the responsive menu open/close when the "open-closed-menu-btn" is clicked
+ */
+const menuBtn = document.getElementsByClassName("open-closed-menu-btn")[0];
+const hamburguerMenu = document.getElementById("hamburguer-menu");
+const principalHeader = document.getElementById("principal-header");
+menuBtn.addEventListener("click", function () {
+    if (principalHeader.className == "open-menu") {
+        principalHeader.classList.remove("open-menu");
+        document.body.style.overflowY = "visible";
+        hamburguerMenu.classList.remove("open");
+    } else {
+        principalHeader.classList.add("open-menu");
+        document.body.style.overflowY = "hidden";
+        hamburguerMenu.classList.add("open");
+    }
+});
+
+window.addEventListener("resize", function () {
+    if (window.innerWidth >= 770) {
+        principalHeader.classList.remove("open-menu");
+        document.body.style.overflowY = "visible";
+        hamburguerMenu.classList.remove("open");
     }
 });
