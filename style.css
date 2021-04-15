@@ -1,4 +1,10 @@
 /* Sass color variables */
+* {
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  padding: 0;
+  font-size: 100%; }
+
 /* Make the body 100% of the browser viewport height */
 html,
 body {
@@ -7,10 +13,6 @@ body {
 
 body {
   overflow-x: hidden; }
-
-* {
-  text-decoration: none;
-  font-family: "Poppins", sans-serif; }
 
 h1 {
   padding: 20% 0 0 0;
@@ -104,6 +106,8 @@ header.open-menu, .open-menu.header-2 {
     margin: 1rem auto;
     font-size: 1.4rem;
     grid-column-gap: 24px; }
+  header.open-menu .outside-header-logo, .open-menu.header-2 .outside-header-logo {
+    display: none; }
 
 .open-closed-menu-btn {
   display: none;
@@ -118,9 +122,11 @@ header.open-menu, .open-menu.header-2 {
 .social-media {
   display: none; }
 
-* {
-  margin: 0;
-  padding: 0; }
+.outside-header-logo {
+  display: none;
+  position: fixed;
+  top: 10px;
+  left: calc(0% + 25px); }
 
 /***** hamburguer-icon ****/
 #hamburguer-menu {
@@ -434,6 +440,8 @@ div[data-scrollmagic-pin-spacer] {
 
   header .open-closed-menu-btn, .header-2 .open-closed-menu-btn {
     display: block; }
+  header .outside-header-logo, .header-2 .outside-header-logo {
+    display: block; }
   header ul, .header-2 ul {
     display: none;
     -webkit-box-orient: vertical;
@@ -528,6 +536,8 @@ div[data-scrollmagic-pin-spacer] {
     left: calc(100vw + -60px); }
 
   header .open-closed-menu-btn, .header-2 .open-closed-menu-btn {
+    display: block; }
+  header .outside-header-logo, .header-2 .outside-header-logo {
     display: block; }
   header ul, .header-2 ul {
     display: none;
