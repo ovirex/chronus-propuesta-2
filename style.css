@@ -213,7 +213,8 @@ section {
   position: relative;
   text-align: center;
   width: 100%;
-  margin-bottom: 500px;
+  margin-bottom: 600px;
+  /* Make a pause between slides */
   /* Center the content of the sections */ }
   section .inner {
     margin: 0 auto;

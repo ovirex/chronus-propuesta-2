@@ -26,7 +26,7 @@ window.addEventListener("scroll", function () {
     const sectionElement = document.getElementById("section-1");
 
     /* The "sectionElement.offsetHeight" is plus 500 because that is the marginBottom of the "section" tag. */
-    const sectionHeight = sectionElement.offsetHeight + 500;
+    const sectionHeight = sectionElement.offsetHeight + 600;
 
     if (window.pageYOffset >= sectionHeight) {
         headerFix.classList.add("header-fixed-position");
