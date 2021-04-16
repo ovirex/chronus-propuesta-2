@@ -228,7 +228,7 @@ header.open-menu ~ div header.header-2 .outside-header-logo {
 
 /* Make each section 100% of the browser viewport height */
 section {
-    height: 100vh;
+    height: 110vh;
     color: white;
     position: relative;
     text-align: center;
@@ -375,7 +375,7 @@ $mouseWheelHoverColor: $mouseHoverColor;
     position: absolute;
     display: block;
     transform: translate(-50%, -50%);
-    bottom: calc(0vh + -60px);
+    bottom: calc(10vh + -60px);
     left: 50%;
     margin: 50px 0;
 }
