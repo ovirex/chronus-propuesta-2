@@ -481,25 +481,25 @@ div[data-scrollmagic-pin-spacer] {
     bottom: 0; }
 
   #section-1 {
-    background-position: right center; }
+    background-position: center center; }
 
   #section-2 {
-    background-position: right center; }
+    background-position: center center; }
 
   #section-3 {
-    background-position: right center; }
+    background-position: center center; }
 
   #section-4 {
-    background-position: right center; }
+    background-position: center center; }
 
   #section-5 {
-    background-position: right center; }
+    background-position: center center; }
 
   #section-6 {
-    background-position: right center; }
+    background-position: center center; }
 
   #section-7 {
-    background-position: right center; } }
+    background-position: center center; } }
 @media screen and (min-width: 320px) and (max-width: 770px) {
   .inner-img {
     width: 215px;

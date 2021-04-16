@@ -553,7 +553,7 @@ $mouseWheelHoverColor: $mouseHoverColor;
 
     @for $i from 1 to 8 {
         #section-#{$i} {
-            background-position: right center;
+            background-position: center center;
         }
     }
 }
