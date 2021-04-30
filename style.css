@@ -271,7 +271,9 @@ section {
   .cart-title h2 {
     font-style: italic;
     font-size: 2.9rem;
-    font-weight: bold; }
+    font-weight: bold;
+    line-height: 1.15;
+    color: #fff; }
     .cart-title h2 span {
       font-size: 1.5rem;
       display: inline-block; }
