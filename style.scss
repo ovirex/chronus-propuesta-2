@@ -86,7 +86,7 @@ header.open-menu {
             &::after {
                 content: "";
                 width: 0;
-                height: 0.15rem;
+                height: 2px;
                 transition: width 500ms cubic-bezier(0.25, 0.1, 0, 1.01);
                 position: absolute;
                 bottom: -12px;

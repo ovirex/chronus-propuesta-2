@@ -82,7 +82,7 @@ header.open-menu, .open-menu.header-2 {
       header.open-menu ul li::after, .open-menu.header-2 ul li::after {
         content: "";
         width: 0;
-        height: 0.15rem;
+        height: 2px;
         -webkit-transition: width 500ms cubic-bezier(0.25, 0.1, 0, 1.01);
         transition: width 500ms cubic-bezier(0.25, 0.1, 0, 1.01);
         position: absolute;
