@@ -337,6 +337,13 @@ section {
     padding: 6px 20px;
     font-style: italic;
     font-size: 1.3rem;
+    transition: all 200ms ease;  
+
+    &:hover {
+        background-color: #fff;
+        color: #000;
+        text-decoration: none;
+    }
 }
 
 .small-title {

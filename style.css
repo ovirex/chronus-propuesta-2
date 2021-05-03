@@ -309,7 +309,13 @@ section {
   border-radius: 40px;
   padding: 6px 20px;
   font-style: italic;
-  font-size: 1.3rem; }
+  font-size: 1.3rem;
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease; }
+  .cart-btn:hover {
+    background-color: #fff;
+    color: #000;
+    text-decoration: none; }
 
 .small-title h2 {
   font-size: 3.9rem; }
