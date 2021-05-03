@@ -59,8 +59,34 @@ header {
             list-style: none;
             color: white;
             font-style: italic;
+            position: relative;
+
+            &:not(.header-img)::after {
+                opacity: 0;
+                content: "";
+                height: 4px;
+                width: 110%;
+                position: absolute;
+                left: 50%;
+                bottom: -14px;
+                background-color: #fff;
+                transition: opacity 200ms ease;
+                transform: translate(-50%, -50%);
+            }
+            &:hover {
+                
+                &::after {
+                    opacity: 1;
+                }
+                
+            }
+
             a {
                 font-weight: 500;
+            }
+            a:hover{
+                color: #e8e8e8;
+                text-decoration: none;
             }
         }
     }
@@ -93,6 +119,7 @@ header.open-menu {
                 background-color: #ffe407;
                 left: 50%;
                 transform: translate(-50%, -50%);
+                opacity: 1;
             }
         }
         li:hover {
@@ -310,6 +337,13 @@ section {
     padding: 6px 20px;
     font-style: italic;
     font-size: 1.3rem;
+    transition: all 200ms ease;  
+
+    &:hover {
+        background-color: #fff;
+        color: #000;
+        text-decoration: none;
+    }
 }
 
 .small-title {
