@@ -58,9 +58,28 @@ header, .header-2 {
       margin: 0 16px;
       list-style: none;
       color: white;
-      font-style: italic; }
+      font-style: italic;
+      position: relative; }
+      header ul li:not(.header-img)::after, .header-2 ul li:not(.header-img)::after {
+        opacity: 0;
+        content: "";
+        height: 4px;
+        width: 110%;
+        position: absolute;
+        left: 50%;
+        bottom: -14px;
+        background-color: #fff;
+        -webkit-transition: opacity 200ms ease;
+        transition: opacity 200ms ease;
+        -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%); }
+      header ul li:hover::after, .header-2 ul li:hover::after {
+        opacity: 1; }
       header ul li a, .header-2 ul li a {
         font-weight: 500; }
+      header ul li a:hover, .header-2 ul li a:hover {
+        color: #e8e8e8;
+        text-decoration: none; }
 
 /************ Responsive menu **************/
 header.open-menu, .open-menu.header-2 {
@@ -90,7 +109,8 @@ header.open-menu, .open-menu.header-2 {
         background-color: #ffe407;
         left: 50%;
         -webkit-transform: translate(-50%, -50%);
-                transform: translate(-50%, -50%); }
+                transform: translate(-50%, -50%);
+        opacity: 1; }
     header.open-menu ul li:hover::after, .open-menu.header-2 ul li:hover::after {
       width: 130%; }
   header.open-menu .social-media, .open-menu.header-2 .social-media {
