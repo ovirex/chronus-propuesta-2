@@ -322,13 +322,7 @@ section {
     }
 }
 
-.big-title {
-    h2 {
-        font-size: 5.5rem;
-        line-height: 1;
-        margin: 0 0 30px 0;
-    }
-}
+
 
 .cart-btn {
     font-weight: bold;
@@ -346,6 +340,14 @@ section {
     }
 }
 
+.big-title {
+    h2 {
+        font-size: 4.4rem;
+        line-height: 1;
+        margin: 0 0 30px 0;
+    }
+}
+
 .small-title {
     @extend .big-title;
     h2 {
@@ -356,7 +358,7 @@ section {
 .medium-title {
     @extend .big-title;
     h2 {
-        font-size: 4.8rem;
+        font-size: 4.4rem;
     }
 }
 
