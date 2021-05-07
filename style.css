@@ -120,7 +120,7 @@ header.open-menu, .open-menu.header-2 {
       width: 130%; }
   header.open-menu .social-media, .open-menu.header-2 .social-media {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
