@@ -146,6 +146,9 @@ header.open-menu {
         font-size: 1.4rem;
         grid-column-gap: 24px;
     }
+    div a:hover {
+        color: #ffe407;
+    }
 }
 
 .open-closed-menu-btn {
