@@ -391,7 +391,7 @@ section {
     background-image: url("http://chronusoil.com/wp-content/uploads/A-DIESEL.jpg");
 }
 #section-4 {
-    background-image: url("http://chronusoil.com/wp-content/uploads/FUERA-DE-BORDA.jpg");
+    background-image: url("https://builders.boxsocialmedia.com/chronusoil/wp-content/uploads/sites/9/2021/05/FUERA-DE-BORDA-1.jpg");
 }
 #section-5 {
     background-image: url("http://chronusoil.com/wp-content/uploads/MOTOCICLETAS.jpg");
@@ -606,6 +606,10 @@ $mouseWheelHoverColor: $mouseHoverColor;
         #section-#{$i} {
             background-position: center center;
         }
+    }
+
+    #section-4 {
+        background-position: center right;
     }
 }
 
