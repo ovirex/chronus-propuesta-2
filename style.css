@@ -49,7 +49,7 @@ header, .header-2 {
         -ms-flex-pack: center;
             justify-content: center;
     width: 100%;
-    margin: 60px 0 0 0;
+    margin: 0;
     padding: 0;
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -84,18 +84,23 @@ header, .header-2 {
 /************ Responsive menu **************/
 header.open-menu, .open-menu.header-2 {
   background-color: #003e5d;
-  height: 100vh;
-  position: fixed; }
+  height: 100%;
+  position: fixed;
+  overflow: auto; }
   header.open-menu .header-logo, .open-menu.header-2 .header-logo {
     display: block;
-    text-align: center; }
+    text-align: center;
+    height: 130px; }
   header.open-menu ul, .open-menu.header-2 ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    height: 65%;
     margin: 0;
-    font-size: 1.4rem; }
+    font-size: 1.2rem; }
+    header.open-menu ul .header-img, .open-menu.header-2 ul .header-img {
+      display: none; }
+    header.open-menu ul li:not(:first-child), .open-menu.header-2 ul li:not(:first-child) {
+      margin-top: 1.5rem; }
     header.open-menu ul li, .open-menu.header-2 ul li {
       position: relative; }
       header.open-menu ul li::after, .open-menu.header-2 ul li::after {
@@ -105,7 +110,7 @@ header.open-menu, .open-menu.header-2 {
         -webkit-transition: width 500ms cubic-bezier(0.25, 0.1, 0, 1.01);
         transition: width 500ms cubic-bezier(0.25, 0.1, 0, 1.01);
         position: absolute;
-        bottom: -12px;
+        bottom: -5px;
         background-color: #ffe407;
         left: 50%;
         -webkit-transform: translate(-50%, -50%);
@@ -115,7 +120,7 @@ header.open-menu, .open-menu.header-2 {
       width: 130%; }
   header.open-menu .social-media, .open-menu.header-2 .social-media {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -123,9 +128,11 @@ header.open-menu, .open-menu.header-2 {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
-    margin: 1rem auto;
+    margin: 2.5rem auto 1rem;
     font-size: 1.4rem;
     grid-column-gap: 24px; }
+  header.open-menu div a:hover, .open-menu.header-2 div a:hover {
+    color: #ffe407; }
 
 .open-closed-menu-btn {
   display: none;
@@ -298,11 +305,6 @@ section {
       font-size: 1.5rem;
       display: inline-block; }
 
-.big-title h2, .small-title h2, .medium-title h2 {
-  font-size: 5.5rem;
-  line-height: 1;
-  margin: 0 0 30px 0; }
-
 .cart-btn {
   font-weight: bold;
   border: 3px solid white;
@@ -317,11 +319,16 @@ section {
     color: #000;
     text-decoration: none; }
 
+.big-title h2, .small-title h2, .medium-title h2 {
+  font-size: 4.4rem;
+  line-height: 1;
+  margin: 0 0 30px 0; }
+
 .small-title h2 {
   font-size: 3.9rem; }
 
 .medium-title h2 {
-  font-size: 4.8rem; }
+  font-size: 4.4rem; }
 
 /* Background colors for each section */
 #section-1 {
@@ -369,7 +376,7 @@ section {
   background-image: url("http://chronusoil.com/wp-content/uploads/A-DIESEL.jpg"); }
 
 #section-4 {
-  background-image: url("http://chronusoil.com/wp-content/uploads/FUERA-DE-BORDA.jpg"); }
+  background-image: url("https://builders.boxsocialmedia.com/chronusoil/wp-content/uploads/sites/9/2021/05/FUERA-DE-BORDA-1.jpg"); }
 
 #section-5 {
   background-image: url("http://chronusoil.com/wp-content/uploads/MOTOCICLETAS.jpg"); }
@@ -531,7 +538,10 @@ div[data-scrollmagic-pin-spacer] {
     background-position: center center; }
 
   #section-7 {
-    background-position: center center; } }
+    background-position: center center; }
+
+  #section-4 {
+    background-position: center right; } }
 @media screen and (min-width: 320px) and (max-width: 770px) {
   .inner-img {
     width: 215px;
